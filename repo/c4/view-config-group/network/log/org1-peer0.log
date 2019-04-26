@@ -1,0 +1,41 @@
+[34m2019-03-23 01:18:28.077 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 1.4.0
+ Commit SHA: d700b43
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Image Version: 0.4.14
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2019-03-23 01:18:28.078 UTC [ledgermgmt] initialize -> INFO 002[0m Initializing ledger mgmt
+[34m2019-03-23 01:18:28.078 UTC [kvledger] NewProvider -> INFO 003[0m Initializing ledger provider
+[34m2019-03-23 01:18:28.114 UTC [kvledger] NewProvider -> INFO 004[0m ledger provider Initialized
+[34m2019-03-23 01:18:28.139 UTC [ledgermgmt] initialize -> INFO 005[0m ledger mgmt initialized
+[34m2019-03-23 01:18:28.139 UTC [nodeCmd] serve -> INFO 006[0m Running in chaincode development mode
+[34m2019-03-23 01:18:28.139 UTC [nodeCmd] serve -> INFO 007[0m Disable loading validity system chaincode
+[34m2019-03-23 01:18:28.139 UTC [peer] func1 -> INFO 008[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-23 01:18:28.140 UTC [peer] func1 -> INFO 009[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-23 01:18:28.140 UTC [peer] func1 -> INFO 00a[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-23 01:18:28.140 UTC [peer] func1 -> INFO 00b[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-23 01:18:28.140 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00c[0m Entering computeChaincodeEndpoint with peerHostname: 172.17.0.2
+[34m2019-03-23 01:18:28.140 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00d[0m Exit with ccEndpoint: 127.0.0.1:7052
+[34m2019-03-23 01:18:28.141 UTC [sccapi] registerSysCC -> INFO 00e[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+[34m2019-03-23 01:18:28.141 UTC [sccapi] registerSysCC -> INFO 00f[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+[34m2019-03-23 01:18:28.141 UTC [sccapi] registerSysCC -> INFO 010[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+[34m2019-03-23 01:18:28.141 UTC [sccapi] registerSysCC -> INFO 011[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle,true) disabled
+[34m2019-03-23 01:18:28.143 UTC [gossip.service] func1 -> INFO 012[0m Initialize gossip with endpoint 172.17.0.2:7051 and bootstrap set [127.0.0.1:7051]
+[34m2019-03-23 01:18:28.145 UTC [gossip.gossip] NewGossipService -> INFO 013[0m Creating gossip service with self membership of Endpoint: , InternalEndpoint: 172.17.0.2:7051, PKI-ID: 323154735f32f31a2cbe6b2e2643640c3c05a057acc5b2db791d4fd0cb45f482, Metadata: 
+[33m2019-03-23 01:18:28.145 UTC [gossip.gossip] NewGossipService -> WARN 014[0m External endpoint is empty, peer will not be accessible outside of its organization
+[34m2019-03-23 01:18:28.146 UTC [gossip.gossip] start -> INFO 015[0m Gossip instance 172.17.0.2:7051 started
+[34m2019-03-23 01:18:28.146 UTC [sccapi] deploySysCC -> INFO 016[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-03-23 01:18:28.146 UTC [cscc] Init -> INFO 017[0m Init CSCC
+[34m2019-03-23 01:18:28.146 UTC [sccapi] deploySysCC -> INFO 018[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-03-23 01:18:28.146 UTC [qscc] Init -> INFO 019[0m Init QSCC
+[34m2019-03-23 01:18:28.146 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-03-23 01:18:28.146 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-03-23 01:18:28.146 UTC [nodeCmd] serve -> INFO 01c[0m Deployed system chaincodes
+[34m2019-03-23 01:18:28.147 UTC [discovery] NewService -> INFO 01d[0m Created with config TLS: false, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2019-03-23 01:18:28.147 UTC [nodeCmd] registerDiscoveryService -> INFO 01e[0m Discovery service activated
+[34m2019-03-23 01:18:28.147 UTC [nodeCmd] serve -> INFO 01f[0m Starting peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]
+[34m2019-03-23 01:18:28.147 UTC [nodeCmd] serve -> INFO 020[0m Started peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]

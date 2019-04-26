@@ -1,0 +1,112 @@
+[34m2019-03-23 01:54:29.650 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 1.4.0
+ Commit SHA: d700b43
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Image Version: 0.4.14
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2019-03-23 01:54:29.651 UTC [ledgermgmt] initialize -> INFO 002[0m Initializing ledger mgmt
+[34m2019-03-23 01:54:29.651 UTC [kvledger] NewProvider -> INFO 003[0m Initializing ledger provider
+[34m2019-03-23 01:54:29.696 UTC [kvledger] NewProvider -> INFO 004[0m ledger provider Initialized
+[34m2019-03-23 01:54:29.717 UTC [ledgermgmt] initialize -> INFO 005[0m ledger mgmt initialized
+[34m2019-03-23 01:54:29.717 UTC [nodeCmd] serve -> INFO 006[0m Running in chaincode development mode
+[34m2019-03-23 01:54:29.717 UTC [nodeCmd] serve -> INFO 007[0m Disable loading validity system chaincode
+[34m2019-03-23 01:54:29.718 UTC [peer] func1 -> INFO 008[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-23 01:54:29.718 UTC [peer] func1 -> INFO 009[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-23 01:54:29.718 UTC [peer] func1 -> INFO 00a[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-23 01:54:29.718 UTC [peer] func1 -> INFO 00b[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-23 01:54:29.719 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00c[0m Entering computeChaincodeEndpoint with peerHostname: 172.17.0.2
+[34m2019-03-23 01:54:29.719 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00d[0m Exit with ccEndpoint: 127.0.0.1:7052
+[34m2019-03-23 01:54:29.720 UTC [sccapi] registerSysCC -> INFO 00e[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+[34m2019-03-23 01:54:29.720 UTC [sccapi] registerSysCC -> INFO 00f[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+[34m2019-03-23 01:54:29.720 UTC [sccapi] registerSysCC -> INFO 010[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+[34m2019-03-23 01:54:29.720 UTC [sccapi] registerSysCC -> INFO 011[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle,true) disabled
+[34m2019-03-23 01:54:29.724 UTC [gossip.service] func1 -> INFO 012[0m Initialize gossip with endpoint 172.17.0.2:7051 and bootstrap set [127.0.0.1:7051]
+[34m2019-03-23 01:54:29.726 UTC [gossip.gossip] NewGossipService -> INFO 013[0m Creating gossip service with self membership of Endpoint: , InternalEndpoint: 172.17.0.2:7051, PKI-ID: 859c2a445a506ac0f217a4e9382f9565dd115a630f97b8de35b7d346c4841d56, Metadata: 
+[33m2019-03-23 01:54:29.726 UTC [gossip.gossip] NewGossipService -> WARN 014[0m External endpoint is empty, peer will not be accessible outside of its organization
+[34m2019-03-23 01:54:29.727 UTC [gossip.gossip] start -> INFO 015[0m Gossip instance 172.17.0.2:7051 started
+[34m2019-03-23 01:54:29.727 UTC [sccapi] deploySysCC -> INFO 016[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-03-23 01:54:29.727 UTC [cscc] Init -> INFO 017[0m Init CSCC
+[34m2019-03-23 01:54:29.727 UTC [sccapi] deploySysCC -> INFO 018[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-03-23 01:54:29.727 UTC [qscc] Init -> INFO 019[0m Init QSCC
+[34m2019-03-23 01:54:29.727 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-03-23 01:54:29.727 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-03-23 01:54:29.727 UTC [nodeCmd] serve -> INFO 01c[0m Deployed system chaincodes
+[34m2019-03-23 01:54:29.728 UTC [discovery] NewService -> INFO 01d[0m Created with config TLS: false, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2019-03-23 01:54:29.728 UTC [nodeCmd] registerDiscoveryService -> INFO 01e[0m Discovery service activated
+[34m2019-03-23 01:54:29.728 UTC [nodeCmd] serve -> INFO 01f[0m Starting peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]
+[34m2019-03-23 01:54:29.728 UTC [nodeCmd] serve -> INFO 020[0m Started peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]
+[34m2019-03-23 01:58:01.321 UTC [comm.grpc.server] 1 -> INFO 021[0m streaming call completed {"grpc.start_time": "2019-03-23T01:58:01.321Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:60172", "grpc.code": "OK", "grpc.call_duration": "708.061µs"}
+[34m2019-03-23 01:59:23.931 UTC [endorser] callChaincode -> INFO 022[0m [][ab8239b0] Entry chaincode: name:"cscc" 
+[34m2019-03-23 01:59:23.931 UTC [ledgermgmt] CreateLedger -> INFO 023[0m Creating ledger [ch1] with genesis block
+[34m2019-03-23 01:59:23.943 UTC [fsblkstorage] newBlockfileMgr -> INFO 024[0m Getting block information from block storage
+[34m2019-03-23 01:59:23.959 UTC [kvledger] CommitWithPvtData -> INFO 025[0m [ch1] Committed block [0] with 1 transaction(s) in 11ms (state_validation=0ms block_commit=7ms state_commit=1ms)
+[34m2019-03-23 01:59:23.961 UTC [ledgermgmt] CreateLedger -> INFO 026[0m Created ledger [ch1] with genesis block
+[34m2019-03-23 01:59:23.962 UTC [gossip.gossip] JoinChan -> INFO 027[0m Joining gossip network of channel ch1 with 1 organizations
+[34m2019-03-23 01:59:23.962 UTC [gossip.gossip] learnAnchorPeers -> INFO 028[0m No configured anchor peers of Org1MSP for channel ch1 to learn about
+[34m2019-03-23 01:59:23.969 UTC [gossip.state] NewGossipStateProvider -> INFO 029[0m Updating metadata information, current ledger sequence is at = 0, next expected block is = 1
+[34m2019-03-23 01:59:23.970 UTC [sccapi] deploySysCC -> INFO 02a[0m system chaincode lscc/ch1(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-03-23 01:59:23.970 UTC [cscc] Init -> INFO 02b[0m Init CSCC
+[34m2019-03-23 01:59:23.970 UTC [sccapi] deploySysCC -> INFO 02c[0m system chaincode cscc/ch1(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-03-23 01:59:23.970 UTC [qscc] Init -> INFO 02d[0m Init QSCC
+[34m2019-03-23 01:59:23.970 UTC [sccapi] deploySysCC -> INFO 02e[0m system chaincode qscc/ch1(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-03-23 01:59:23.970 UTC [sccapi] deploySysCC -> INFO 02f[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-03-23 01:59:23.970 UTC [endorser] callChaincode -> INFO 030[0m [][ab8239b0] Exit chaincode: name:"cscc"  (40ms)
+[34m2019-03-23 01:59:23.970 UTC [comm.grpc.server] 1 -> INFO 031[0m unary call completed {"grpc.start_time": "2019-03-23T01:59:23.93Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:60176", "grpc.code": "OK", "grpc.call_duration": "40.766471ms"}
+[34m2019-03-23 01:59:24.032 UTC [endorser] callChaincode -> INFO 032[0m [][5f40fc34] Entry chaincode: name:"lscc" 
+[34m2019-03-23 01:59:24.033 UTC [lscc] executeInstall -> INFO 033[0m Installed Chaincode [wizcc] Version [0] to peer
+[34m2019-03-23 01:59:24.033 UTC [endorser] callChaincode -> INFO 034[0m [][5f40fc34] Exit chaincode: name:"lscc"  (1ms)
+[34m2019-03-23 01:59:24.033 UTC [comm.grpc.server] 1 -> INFO 035[0m unary call completed {"grpc.start_time": "2019-03-23T01:59:24.032Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:60177", "grpc.code": "OK", "grpc.call_duration": "1.877828ms"}
+[34m2019-03-23 01:59:24.094 UTC [endorser] callChaincode -> INFO 036[0m [ch1][7179d36b] Entry chaincode: name:"lscc" 
+[34m2019-03-23 01:59:24.099 UTC [endorser] callChaincode -> INFO 037[0m [ch1][7179d36b] Exit chaincode: name:"lscc"  (5ms)
+[34m2019-03-23 01:59:24.100 UTC [comm.grpc.server] 1 -> INFO 038[0m unary call completed {"grpc.start_time": "2019-03-23T01:59:24.094Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:60179", "grpc.code": "OK", "grpc.call_duration": "6.021623ms"}
+[34m2019-03-23 01:59:29.971 UTC [gossip.election] beLeader -> INFO 039[0m 859c2a445a506ac0f217a4e9382f9565dd115a630f97b8de35b7d346c4841d56 : Becoming a leader
+[34m2019-03-23 01:59:29.971 UTC [gossip.service] func1 -> INFO 03a[0m Elected as a leader, starting delivery service for channel ch1
+[34m2019-03-23 01:59:29.974 UTC [gossip.privdata] StoreBlock -> INFO 03b[0m [ch1] Received block [1] from buffer
+[34m2019-03-23 01:59:29.975 UTC [committer.txvalidator] Validate -> INFO 03c[0m [ch1] Validated block [1] in 1ms
+[34m2019-03-23 01:59:29.975 UTC [cceventmgmt] HandleStateUpdates -> INFO 03d[0m Channel [ch1]: Handling deploy or update of chaincode [wizcc]
+[34m2019-03-23 01:59:30.175 UTC [kvledger] CommitWithPvtData -> INFO 03e[0m [ch1] Committed block [1] with 1 transaction(s) in 199ms (state_validation=0ms block_commit=195ms state_commit=2ms)
+[33m2019-03-23 01:59:30.179 UTC [common.deliver] Handle -> WARN 03f[0m Error reading from 127.0.0.1:60183: rpc error: code = Canceled desc = context canceled
+[34m2019-03-23 01:59:30.179 UTC [comm.grpc.server] 1 -> INFO 040[0m streaming call completed {"grpc.start_time": "2019-03-23T01:59:30.154Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:60183", "error": "rpc error: code = Canceled desc = context canceled", "grpc.code": "Canceled", "grpc.call_duration": "25.660064ms"}
+[34m2019-03-23 02:00:49.030 UTC [endorser] callChaincode -> INFO 041[0m [][3f870dcd] Entry chaincode: name:"cscc" 
+[34m2019-03-23 02:00:49.031 UTC [endorser] callChaincode -> INFO 042[0m [][3f870dcd] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-23 02:00:49.031 UTC [comm.grpc.server] 1 -> INFO 043[0m unary call completed {"grpc.start_time": "2019-03-23T02:00:49.03Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:60185", "grpc.code": "OK", "grpc.call_duration": "682.856µs"}
+[33m2019-03-23 02:03:28.868 UTC [common.deliver] Handle -> WARN 044[0m Error reading from 127.0.0.1:60186: rpc error: code = Canceled desc = context canceled
+[34m2019-03-23 02:03:28.868 UTC [comm.grpc.server] 1 -> INFO 045[0m streaming call completed {"grpc.start_time": "2019-03-23T02:03:28.864Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:60186", "error": "rpc error: code = Canceled desc = context canceled", "grpc.code": "Canceled", "grpc.call_duration": "3.752169ms"}
+[34m2019-03-23 02:18:16.117 UTC [gossip.privdata] StoreBlock -> INFO 046[0m [ch1] Received block [2] from buffer
+[31m2019-03-23 02:18:16.119 UTC [protoutils] ValidateTransaction -> ERRO 047[0m checkSignatureFromCreator returns err MSP error: MSP OrdererMSP is unknown
+[31m2019-03-23 02:18:16.119 UTC [committer.txvalidator] validateTx -> ERRO 048[0m Invalid transaction with index 0
+[34m2019-03-23 02:18:16.119 UTC [committer.txvalidator] Validate -> INFO 049[0m [ch1] Validated block [2] in 1ms
+[33m2019-03-23 02:18:16.120 UTC [valimpl] preprocessProtoBlock -> WARN 04a[0m Channel [ch1]: Block [2] Transaction index [0] TxId [] marked as invalid by committer. Reason code [BAD_CREATOR_SIGNATURE]
+[34m2019-03-23 02:18:16.132 UTC [kvledger] CommitWithPvtData -> INFO 04b[0m [ch1] Committed block [2] with 1 transaction(s) in 12ms (state_validation=0ms block_commit=9ms state_commit=1ms)
+[31m2019-03-23 02:26:34.685 UTC [chaincode] ProcessStream -> ERRO 04c[0m handling chaincode support stream: rpc error: code = Canceled desc = context canceled
+receive failed
+github.com/hyperledger/fabric/core/chaincode.(*Handler).ProcessStream
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/core/chaincode/handler.go:427
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).HandleChaincodeStream
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:190
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).Register
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:195
+github.com/hyperledger/fabric/protos/peer._ChaincodeSupport_Register_Handler
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/protos/peer/chaincode_shim.pb.go:1066
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).processStreamingRPC
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:1124
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).handleStream
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:1212
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/home/jacky/hyperledger/go/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:686
+runtime.goexit
+	/usr/local/go/src/runtime/asm_amd64.s:2361
+[33m2019-03-23 02:31:53.199 UTC [deliveryClient] try -> WARN 04d[0m Got error: rpc error: code = Unavailable desc = transport is closing , at 1 attempt. Retrying in 1s
+[34m2019-03-23 02:31:53.202 UTC [nodeCmd] handleSignals -> INFO 04e[0m Received signal: 15 (terminated)
+[34m2019-03-23 02:31:53.202 UTC [gossip.service] Stop -> INFO 04f[0m Stopping chain ch1
+[34m2019-03-23 02:31:53.202 UTC [gossip.service] Stop -> INFO 050[0m Stopping leader election for ch1
+[34m2019-03-23 02:31:53.202 UTC [gossip.gossip] Stop -> INFO 051[0m Stopping gossip
+[34m2019-03-23 02:31:53.202 UTC [gossip.discovery] Stop -> INFO 052[0m Stopping
+[34m2019-03-23 02:31:53.202 UTC [gossip.discovery] Stop -> INFO 053[0m Stopped
+[33m2019-03-23 02:31:53.202 UTC [blocksProvider] DeliverBlocks -> WARN 054[0m [ch1] Receive error: client is closing
+[34m2019-03-23 02:31:53.202 UTC [gossip.comm] Stop -> INFO 055[0m Stopping
+[34m2019-03-23 02:31:53.202 UTC [gossip.comm] Stop -> INFO 056[0m Stopped

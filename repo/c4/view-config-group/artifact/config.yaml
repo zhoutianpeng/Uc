@@ -1,0 +1,222 @@
+channel_group:
+  groups:
+    Consortiums:
+      groups:
+        SampleConsortium:
+          groups:
+            Org1:
+              groups: {}
+              mod_policy: Admins
+              policies:
+                Admins:
+                  mod_policy: Admins
+                  policy:
+                    type: 1
+                    value:
+                      identities:
+                        - principal:
+                            msp_identifier: Org1MSP
+                            role: ADMIN
+                          principal_classification: ROLE
+                      rule:
+                        n_out_of:
+                          'n': 1
+                          rules:
+                            - signed_by: 0
+                      version: 0
+                  version: '0'
+                Readers:
+                  mod_policy: Admins
+                  policy:
+                    type: 1
+                    value:
+                      identities:
+                        - principal:
+                            msp_identifier: Org1MSP
+                            role: MEMBER
+                          principal_classification: ROLE
+                      rule:
+                        n_out_of:
+                          'n': 1
+                          rules:
+                            - signed_by: 0
+                      version: 0
+                  version: '0'
+                Writers:
+                  mod_policy: Admins
+                  policy:
+                    type: 1
+                    value:
+                      identities:
+                        - principal:
+                            msp_identifier: Org1MSP
+                            role: MEMBER
+                          principal_classification: ROLE
+                      rule:
+                        n_out_of:
+                          'n': 1
+                          rules:
+                            - signed_by: 0
+                      version: 0
+                  version: '0'
+              values:
+                MSP:
+                  mod_policy: Admins
+                  value:
+                    config:
+                      admins:
+                        - >-
+                          LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNHRENDQWIrZ0F3SUJBZ0lRS1N5Yk5qcTRSSUt4dEp1UzdSYURMakFLQmdncWhrak9QUVFEQWpCek1Rc3cKQ1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0JNS1EyRnNhV1p2Y201cFlURVdNQlFHQTFVRUJ4TU5VMkZ1SUVaeQpZVzVqYVhOamJ6RVpNQmNHQTFVRUNoTVFiM0puTVM1bGVHRnRjR3hsTG1OdmJURWNNQm9HQTFVRUF4TVRZMkV1CmIzSm5NUzVsZUdGdGNHeGxMbU52YlRBZUZ3MHhPVEF6TWpNd01URXhNREJhRncweU9UQXpNakF3TVRFeE1EQmEKTUZzeEN6QUpCZ05WQkFZVEFsVlRNUk13RVFZRFZRUUlFd3BEWVd4cFptOXlibWxoTVJZd0ZBWURWUVFIRXcxVApZVzRnUm5KaGJtTnBjMk52TVI4d0hRWURWUVFEREJaQlpHMXBia0J2Y21jeExtVjRZVzF3YkdVdVkyOXRNRmt3CkV3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFSzhCczlwOUU5VkkzT2JIZFN4TzhwWDlwTHh0TWRQSWIKTDZ2UzlEeFlETmJIblVMaTJ1TnpqMk1RbUJVQUFyWWEzbW1IdXhtQVFWYVJ2Yk5QN3dLcFdxTk5NRXN3RGdZRApWUjBQQVFIL0JBUURBZ2VBTUF3R0ExVWRFd0VCL3dRQ01BQXdLd1lEVlIwakJDUXdJb0FnR0NIMWQvd2srNm1BCi8xQmhyRi80SnJsdS96dm10Qjh2aGpGQlU5emVFOEl3Q2dZSUtvWkl6ajBFQXdJRFJ3QXdSQUlnRHNGam5lZUMKU2N5aDZDekRvdHlkMEFJZVBqOS9IWmYrMHJoWTVwanRqR1FDSUNuMU9mdUpzd2ZYQ1lzdXUxRVoyRDJwU0d3SQozQithYkRjTE1iSkZsVFdvCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+                      crypto_config:
+                        identity_identifier_hash_function: SHA256
+                        signature_hash_family: SHA2
+                      fabric_node_ous: null
+                      intermediate_certs: []
+                      name: Org1MSP
+                      organizational_unit_identifiers: []
+                      revocation_list: []
+                      root_certs:
+                        - >-
+                          LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNVVENDQWZlZ0F3SUJBZ0lRRGZNSWhJakY5VS9XT3Q5V1NHOTFoekFLQmdncWhrak9QUVFEQWpCek1Rc3cKQ1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0JNS1EyRnNhV1p2Y201cFlURVdNQlFHQTFVRUJ4TU5VMkZ1SUVaeQpZVzVqYVhOamJ6RVpNQmNHQTFVRUNoTVFiM0puTVM1bGVHRnRjR3hsTG1OdmJURWNNQm9HQTFVRUF4TVRZMkV1CmIzSm5NUzVsZUdGdGNHeGxMbU52YlRBZUZ3MHhPVEF6TWpNd01URXhNREJhRncweU9UQXpNakF3TVRFeE1EQmEKTUhNeEN6QUpCZ05WQkFZVEFsVlRNUk13RVFZRFZRUUlFd3BEWVd4cFptOXlibWxoTVJZd0ZBWURWUVFIRXcxVApZVzRnUm5KaGJtTnBjMk52TVJrd0Z3WURWUVFLRXhCdmNtY3hMbVY0WVcxd2JHVXVZMjl0TVJ3d0dnWURWUVFECkV4TmpZUzV2Y21jeExtVjRZVzF3YkdVdVkyOXRNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUUKc29QVHlHQXUrRjR1WFRsdkloTWFNdDFub3Rnek56cXlvNzRVbDdTVndOT3lBSmVGUWxoVjA0SzcybzhyWmlzbgpLbzM4ZmxNNzA4a2w2Y2g5MU0vOXpxTnRNR3N3RGdZRFZSMFBBUUgvQkFRREFnR21NQjBHQTFVZEpRUVdNQlFHCkNDc0dBUVVGQndNQ0JnZ3JCZ0VGQlFjREFUQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01Da0dBMVVkRGdRaUJDQVkKSWZWMy9DVDdxWUQvVUdHc1gvZ211VzcvTythMEh5K0dNVUZUM040VHdqQUtCZ2dxaGtqT1BRUURBZ05JQURCRgpBaUVBellFNit1bjhhbGF2Q245MlM1R1FERENkQkMyQytaMVNtbXh0UHF2U1pFQUNJSGlWbkp3RHlkR3B6ZmUvCk9CVlNYNWNMbi9ETmlMWHdhL013Q2REUDVjVXUKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+                      signing_identity: null
+                      tls_intermediate_certs: []
+                      tls_root_certs:
+                        - >-
+                          LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNWekNDQWY2Z0F3SUJBZ0lSQU5Xc0szY2I5bkxqcEo5R2d2amo3Lzh3Q2dZSUtvWkl6ajBFQXdJd2RqRUwKTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFnVENrTmhiR2xtYjNKdWFXRXhGakFVQmdOVkJBY1REVk5oYmlCRwpjbUZ1WTJselkyOHhHVEFYQmdOVkJBb1RFRzl5WnpFdVpYaGhiWEJzWlM1amIyMHhIekFkQmdOVkJBTVRGblJzCmMyTmhMbTl5WnpFdVpYaGhiWEJzWlM1amIyMHdIaGNOTVRrd016SXpNREV4TVRBd1doY05Namt3TXpJd01ERXgKTVRBd1dqQjJNUXN3Q1FZRFZRUUdFd0pWVXpFVE1CRUdBMVVFQ0JNS1EyRnNhV1p2Y201cFlURVdNQlFHQTFVRQpCeE1OVTJGdUlFWnlZVzVqYVhOamJ6RVpNQmNHQTFVRUNoTVFiM0puTVM1bGVHRnRjR3hsTG1OdmJURWZNQjBHCkExVUVBeE1XZEd4elkyRXViM0puTVM1bGVHRnRjR3hsTG1OdmJUQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDkKQXdFSEEwSUFCUFp1OVJoN04xUWJxK3V1TGJvWnhzZ1NWeXlEVFNXZWFHZktuTlNtVzJnWUFXNkZJcFNHUnV2OApiYm83RnlCZVlPYlErVzBmbVpmMnZ0YVgwY1ZNbGNtamJUQnJNQTRHQTFVZER3RUIvd1FFQXdJQnBqQWRCZ05WCkhTVUVGakFVQmdnckJnRUZCUWNEQWdZSUt3WUJCUVVIQXdFd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBcEJnTlYKSFE0RUlnUWcxY2lhRUV3REV1Mm1qWFA1dWhNeWgvTHR4SjBXMU9teFVEOTY4blBWSXhVd0NnWUlLb1pJemowRQpBd0lEUndBd1JBSWdCcHRscGdSdlV4L2oweGRjTndycXMzVGRORzVvdEh0OWNoQXpZUG5keUtnQ0lES3ZmK2RiCmh0UjFodTZEN24zWnRhODFmRnNpdXR0cS9zUVV0WXlZY0FTNgotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+                    type: 0
+                  version: '0'
+              version: '0'
+          mod_policy: /Channel/Orderer/Admins
+          policies: {}
+          values:
+            ChannelCreationPolicy:
+              mod_policy: /Channel/Orderer/Admins
+              value:
+                type: 3
+                value:
+                  rule: ANY
+                  sub_policy: Admins
+              version: '0'
+          version: '0'
+      mod_policy: /Channel/Orderer/Admins
+      policies:
+        Admins:
+          mod_policy: /Channel/Orderer/Admins
+          policy:
+            type: 1
+            value:
+              identities: []
+              rule:
+                n_out_of:
+                  'n': 0
+                  rules: []
+              version: 0
+          version: '0'
+      values: {}
+      version: '0'
+    Orderer:
+      groups: {}
+      mod_policy: Admins
+      policies:
+        Admins:
+          mod_policy: Admins
+          policy:
+            type: 3
+            value:
+              rule: MAJORITY
+              sub_policy: Admins
+          version: '0'
+        BlockValidation:
+          mod_policy: Admins
+          policy:
+            type: 3
+            value:
+              rule: ANY
+              sub_policy: Writers
+          version: '0'
+        Readers:
+          mod_policy: Admins
+          policy:
+            type: 3
+            value:
+              rule: ANY
+              sub_policy: Readers
+          version: '0'
+        Writers:
+          mod_policy: Admins
+          policy:
+            type: 3
+            value:
+              rule: ANY
+              sub_policy: Writers
+          version: '0'
+      values:
+        BatchSize:
+          mod_policy: Admins
+          value:
+            absolute_max_bytes: 10485760
+            max_message_count: 10
+            preferred_max_bytes: 524288
+          version: '0'
+        BatchTimeout:
+          mod_policy: Admins
+          value:
+            timeout: 2s
+          version: '0'
+        ChannelRestrictions:
+          mod_policy: Admins
+          value: null
+          version: '0'
+        ConsensusType:
+          mod_policy: Admins
+          value:
+            metadata: null
+            type: solo
+          version: '0'
+      version: '0'
+  mod_policy: Admins
+  policies:
+    Admins:
+      mod_policy: Admins
+      policy:
+        type: 3
+        value:
+          rule: MAJORITY
+          sub_policy: Admins
+      version: '0'
+    Readers:
+      mod_policy: Admins
+      policy:
+        type: 3
+        value:
+          rule: ANY
+          sub_policy: Readers
+      version: '0'
+    Writers:
+      mod_policy: Admins
+      policy:
+        type: 3
+        value:
+          rule: ANY
+          sub_policy: Writers
+      version: '0'
+  values:
+    BlockDataHashingStructure:
+      mod_policy: Admins
+      value:
+        width: 4294967295
+      version: '0'
+    HashingAlgorithm:
+      mod_policy: Admins
+      value:
+        name: SHA256
+      version: '0'
+    OrdererAddresses:
+      mod_policy: /Channel/Orderer/Admins
+      value:
+        addresses:
+          - '127.0.0.1:7050'
+      version: '0'
+  version: '0'
+sequence: '0'
+

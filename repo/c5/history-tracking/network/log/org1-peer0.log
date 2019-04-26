@@ -1,0 +1,165 @@
+[34m2019-03-27 02:51:39.950 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 1.4.0
+ Commit SHA: d700b43
+ Go version: go1.10
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Image Version: 0.4.14
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2019-03-27 02:51:39.951 UTC [ledgermgmt] initialize -> INFO 002[0m Initializing ledger mgmt
+[34m2019-03-27 02:51:39.951 UTC [kvledger] NewProvider -> INFO 003[0m Initializing ledger provider
+[34m2019-03-27 02:51:40.023 UTC [kvledger] NewProvider -> INFO 004[0m ledger provider Initialized
+[34m2019-03-27 02:51:40.050 UTC [ledgermgmt] initialize -> INFO 005[0m ledger mgmt initialized
+[34m2019-03-27 02:51:40.050 UTC [nodeCmd] serve -> INFO 006[0m Running in chaincode development mode
+[34m2019-03-27 02:51:40.050 UTC [nodeCmd] serve -> INFO 007[0m Disable loading validity system chaincode
+[34m2019-03-27 02:51:40.051 UTC [peer] func1 -> INFO 008[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-27 02:51:40.051 UTC [peer] func1 -> INFO 009[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-27 02:51:40.051 UTC [peer] func1 -> INFO 00a[0m Auto-detected peer address: 172.17.0.2:7051
+[34m2019-03-27 02:51:40.051 UTC [peer] func1 -> INFO 00b[0m Host is 0.0.0.0 , falling back to auto-detected address: 172.17.0.2:7051
+[34m2019-03-27 02:51:40.052 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00c[0m Entering computeChaincodeEndpoint with peerHostname: 172.17.0.2
+[34m2019-03-27 02:51:40.052 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 00d[0m Exit with ccEndpoint: 127.0.0.1:7052
+[34m2019-03-27 02:51:40.053 UTC [sccapi] registerSysCC -> INFO 00e[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+[34m2019-03-27 02:51:40.053 UTC [sccapi] registerSysCC -> INFO 00f[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+[34m2019-03-27 02:51:40.053 UTC [sccapi] registerSysCC -> INFO 010[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+[34m2019-03-27 02:51:40.053 UTC [sccapi] registerSysCC -> INFO 011[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle,true) disabled
+[34m2019-03-27 02:51:40.056 UTC [gossip.service] func1 -> INFO 012[0m Initialize gossip with endpoint 172.17.0.2:7051 and bootstrap set [127.0.0.1:7051]
+[34m2019-03-27 02:51:40.060 UTC [gossip.gossip] NewGossipService -> INFO 013[0m Creating gossip service with self membership of Endpoint: , InternalEndpoint: 172.17.0.2:7051, PKI-ID: 98e326ae929aba3144203b76cef057bc648996007610d96dd0d35525660a2645, Metadata: 
+[33m2019-03-27 02:51:40.061 UTC [gossip.gossip] NewGossipService -> WARN 014[0m External endpoint is empty, peer will not be accessible outside of its organization
+[34m2019-03-27 02:51:40.062 UTC [gossip.gossip] start -> INFO 015[0m Gossip instance 172.17.0.2:7051 started
+[34m2019-03-27 02:51:40.062 UTC [sccapi] deploySysCC -> INFO 016[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-03-27 02:51:40.062 UTC [cscc] Init -> INFO 017[0m Init CSCC
+[34m2019-03-27 02:51:40.062 UTC [sccapi] deploySysCC -> INFO 018[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-03-27 02:51:40.063 UTC [qscc] Init -> INFO 019[0m Init QSCC
+[34m2019-03-27 02:51:40.063 UTC [sccapi] deploySysCC -> INFO 01a[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-03-27 02:51:40.063 UTC [sccapi] deploySysCC -> INFO 01b[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-03-27 02:51:40.063 UTC [nodeCmd] serve -> INFO 01c[0m Deployed system chaincodes
+[34m2019-03-27 02:51:40.063 UTC [peer] Initialize -> INFO 01d[0m Loading chain ch1
+[34m2019-03-27 02:51:40.063 UTC [ledgermgmt] OpenLedger -> INFO 01e[0m Opening ledger with id = ch1
+[34m2019-03-27 02:51:40.069 UTC [ledgermgmt] OpenLedger -> INFO 01f[0m Opened ledger with id = ch1
+[34m2019-03-27 02:51:40.071 UTC [gossip.gossip] JoinChan -> INFO 020[0m Joining gossip network of channel ch1 with 1 organizations
+[34m2019-03-27 02:51:40.071 UTC [gossip.gossip] learnAnchorPeers -> INFO 021[0m No configured anchor peers of Org1MSP for channel ch1 to learn about
+[34m2019-03-27 02:51:40.079 UTC [gossip.state] NewGossipStateProvider -> INFO 022[0m Updating metadata information, current ledger sequence is at = 9, next expected block is = 10
+[34m2019-03-27 02:51:40.080 UTC [sccapi] deploySysCC -> INFO 023[0m system chaincode lscc/ch1(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-03-27 02:51:40.080 UTC [cscc] Init -> INFO 024[0m Init CSCC
+[34m2019-03-27 02:51:40.080 UTC [sccapi] deploySysCC -> INFO 025[0m system chaincode cscc/ch1(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-03-27 02:51:40.080 UTC [qscc] Init -> INFO 026[0m Init QSCC
+[34m2019-03-27 02:51:40.080 UTC [sccapi] deploySysCC -> INFO 027[0m system chaincode qscc/ch1(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-03-27 02:51:40.080 UTC [sccapi] deploySysCC -> INFO 028[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-03-27 02:51:40.081 UTC [discovery] NewService -> INFO 029[0m Created with config TLS: false, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2019-03-27 02:51:40.081 UTC [nodeCmd] registerDiscoveryService -> INFO 02a[0m Discovery service activated
+[34m2019-03-27 02:51:40.081 UTC [nodeCmd] serve -> INFO 02b[0m Starting peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]
+[34m2019-03-27 02:51:40.081 UTC [nodeCmd] serve -> INFO 02c[0m Started peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[172.17.0.2:7051]
+[34m2019-03-27 02:51:46.081 UTC [gossip.election] beLeader -> INFO 02d[0m 98e326ae929aba3144203b76cef057bc648996007610d96dd0d35525660a2645 : Becoming a leader
+[34m2019-03-27 02:51:46.081 UTC [gossip.service] func1 -> INFO 02e[0m Elected as a leader, starting delivery service for channel ch1
+[34m2019-03-27 02:52:58.954 UTC [endorser] callChaincode -> INFO 02f[0m [ch1][05a13fb6] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 02:52:59.024 UTC [endorser] callChaincode -> INFO 030[0m [ch1][05a13fb6] Exit chaincode: name:"wizcc"  (70ms)
+[34m2019-03-27 02:52:59.024 UTC [comm.grpc.server] 1 -> INFO 031[0m unary call completed {"grpc.start_time": "2019-03-27T02:52:58.953Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40457", "grpc.code": "OK", "grpc.call_duration": "70.97818ms"}
+[33m2019-03-27 03:01:06.598 UTC [protoutils] ValidateProposalMessage -> WARN 032[0m channel [ch1]: MSP error: MSP SampleOrg is unknown
+[34m2019-03-27 03:01:06.599 UTC [comm.grpc.server] 1 -> INFO 033[0m unary call completed {"grpc.start_time": "2019-03-27T03:01:06.598Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40526", "error": "access denied: channel [ch1] creator org [SampleOrg]", "grpc.code": "Unknown", "grpc.call_duration": "297.15µs"}
+[31m2019-03-27 03:01:06.661 UTC [cauthdsl] deduplicate -> ERRO 034[0m Principal deserialization failure (MSP SampleOrg is unknown) for identity 0
+[33m2019-03-27 03:01:06.661 UTC [common.deliver] deliverBlocks -> WARN 035[0m [channel: ch1] Client authorization revoked for deliver request from 127.0.0.1:40527: Failed evaluating policy on signed data during check policy on channel [ch1] with policy [/Channel/Application/Readers]: [Failed to reach implicit threshold of 1 sub-policies, required 1 remaining]
+[34m2019-03-27 03:01:06.661 UTC [comm.grpc.server] 1 -> INFO 036[0m streaming call completed {"grpc.start_time": "2019-03-27T03:01:06.656Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40527", "grpc.code": "OK", "grpc.call_duration": "4.924049ms"}
+[33m2019-03-27 03:01:06.713 UTC [protoutils] ValidateProposalMessage -> WARN 037[0m channel [ch1]: MSP error: MSP SampleOrg is unknown
+[34m2019-03-27 03:01:06.713 UTC [comm.grpc.server] 1 -> INFO 038[0m unary call completed {"grpc.start_time": "2019-03-27T03:01:06.712Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40526", "error": "access denied: channel [ch1] creator org [SampleOrg]", "grpc.code": "Unknown", "grpc.call_duration": "195.602µs"}
+[34m2019-03-27 03:03:49.390 UTC [endorser] callChaincode -> INFO 039[0m [ch1][823fa7cf] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:03:49.390 UTC [endorser] callChaincode -> INFO 03a[0m [ch1][823fa7cf] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:03:49.390 UTC [comm.grpc.server] 1 -> INFO 03b[0m unary call completed {"grpc.start_time": "2019-03-27T03:03:49.39Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40531", "grpc.code": "OK", "grpc.call_duration": "858.954µs"}
+[34m2019-03-27 03:03:49.574 UTC [endorser] callChaincode -> INFO 03c[0m [ch1][9a3cb90b] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:03:49.583 UTC [endorser] callChaincode -> INFO 03d[0m [ch1][9a3cb90b] Exit chaincode: name:"wizcc"  (9ms)
+[34m2019-03-27 03:03:49.583 UTC [comm.grpc.server] 1 -> INFO 03e[0m unary call completed {"grpc.start_time": "2019-03-27T03:03:49.574Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40531", "grpc.code": "OK", "grpc.call_duration": "9.761925ms"}
+[34m2019-03-27 03:03:50.099 UTC [comm.grpc.server] 1 -> INFO 03f[0m streaming call completed {"grpc.start_time": "2019-03-27T03:03:49.532Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40532", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "567.034644ms"}
+[34m2019-03-27 03:04:41.738 UTC [endorser] callChaincode -> INFO 040[0m [ch1][cec9d04d] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:04:41.738 UTC [endorser] callChaincode -> INFO 041[0m [ch1][cec9d04d] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:04:41.738 UTC [comm.grpc.server] 1 -> INFO 042[0m unary call completed {"grpc.start_time": "2019-03-27T03:04:41.737Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40536", "grpc.code": "OK", "grpc.call_duration": "817.114µs"}
+[34m2019-03-27 03:04:41.912 UTC [endorser] callChaincode -> INFO 043[0m [ch1][280d5dc8] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:04:41.921 UTC [endorser] callChaincode -> INFO 044[0m [ch1][280d5dc8] Exit chaincode: name:"wizcc"  (9ms)
+[34m2019-03-27 03:04:41.921 UTC [comm.grpc.server] 1 -> INFO 045[0m unary call completed {"grpc.start_time": "2019-03-27T03:04:41.911Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40536", "grpc.code": "OK", "grpc.call_duration": "9.826448ms"}
+[34m2019-03-27 03:04:42.424 UTC [comm.grpc.server] 1 -> INFO 046[0m streaming call completed {"grpc.start_time": "2019-03-27T03:04:41.871Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40537", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "553.13344ms"}
+[34m2019-03-27 03:04:51.731 UTC [endorser] callChaincode -> INFO 047[0m [ch1][35f84a50] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:04:51.731 UTC [endorser] callChaincode -> INFO 048[0m [ch1][35f84a50] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:04:51.731 UTC [comm.grpc.server] 1 -> INFO 049[0m unary call completed {"grpc.start_time": "2019-03-27T03:04:51.73Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40541", "grpc.code": "OK", "grpc.call_duration": "1.061048ms"}
+[34m2019-03-27 03:04:51.904 UTC [endorser] callChaincode -> INFO 04a[0m [ch1][a4e0a57a] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:04:51.911 UTC [endorser] callChaincode -> INFO 04b[0m [ch1][a4e0a57a] Exit chaincode: name:"wizcc"  (6ms)
+[34m2019-03-27 03:04:51.911 UTC [comm.grpc.server] 1 -> INFO 04c[0m unary call completed {"grpc.start_time": "2019-03-27T03:04:51.904Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40541", "grpc.code": "OK", "grpc.call_duration": "7.12916ms"}
+[34m2019-03-27 03:04:52.392 UTC [comm.grpc.server] 1 -> INFO 04d[0m streaming call completed {"grpc.start_time": "2019-03-27T03:04:51.861Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40542", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "530.278632ms"}
+[34m2019-03-27 03:05:04.859 UTC [endorser] callChaincode -> INFO 04e[0m [ch1][ac0471e0] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:05:04.860 UTC [endorser] callChaincode -> INFO 04f[0m [ch1][ac0471e0] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:05:04.860 UTC [comm.grpc.server] 1 -> INFO 050[0m unary call completed {"grpc.start_time": "2019-03-27T03:05:04.859Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40546", "grpc.code": "OK", "grpc.call_duration": "775.522µs"}
+[34m2019-03-27 03:05:05.039 UTC [endorser] callChaincode -> INFO 051[0m [ch1][074515dd] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:05:05.050 UTC [endorser] callChaincode -> INFO 052[0m [ch1][074515dd] Exit chaincode: name:"wizcc"  (11ms)
+[34m2019-03-27 03:05:05.050 UTC [comm.grpc.server] 1 -> INFO 053[0m unary call completed {"grpc.start_time": "2019-03-27T03:05:05.038Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40546", "grpc.code": "OK", "grpc.call_duration": "11.793657ms"}
+[34m2019-03-27 03:05:05.520 UTC [comm.grpc.server] 1 -> INFO 054[0m streaming call completed {"grpc.start_time": "2019-03-27T03:05:04.991Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40547", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "529.22593ms"}
+[34m2019-03-27 03:05:16.283 UTC [endorser] callChaincode -> INFO 055[0m [ch1][5d6d4bed] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:05:16.283 UTC [endorser] callChaincode -> INFO 056[0m [ch1][5d6d4bed] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:05:16.284 UTC [comm.grpc.server] 1 -> INFO 057[0m unary call completed {"grpc.start_time": "2019-03-27T03:05:16.283Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40551", "grpc.code": "OK", "grpc.call_duration": "972.043µs"}
+[34m2019-03-27 03:05:16.461 UTC [endorser] callChaincode -> INFO 058[0m [ch1][f77ecbdd] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:05:16.476 UTC [endorser] callChaincode -> INFO 059[0m [ch1][f77ecbdd] Exit chaincode: name:"wizcc"  (15ms)
+[34m2019-03-27 03:05:16.476 UTC [comm.grpc.server] 1 -> INFO 05a[0m unary call completed {"grpc.start_time": "2019-03-27T03:05:16.46Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40551", "grpc.code": "OK", "grpc.call_duration": "15.946331ms"}
+[34m2019-03-27 03:05:16.948 UTC [comm.grpc.server] 1 -> INFO 05b[0m streaming call completed {"grpc.start_time": "2019-03-27T03:05:16.421Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40552", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "526.498552ms"}
+[34m2019-03-27 03:11:43.294 UTC [endorser] callChaincode -> INFO 05c[0m [ch1][0d4efc9a] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:11:43.294 UTC [endorser] callChaincode -> INFO 05d[0m [ch1][0d4efc9a] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:11:43.294 UTC [comm.grpc.server] 1 -> INFO 05e[0m unary call completed {"grpc.start_time": "2019-03-27T03:11:43.294Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40556", "grpc.code": "OK", "grpc.call_duration": "825.57µs"}
+[34m2019-03-27 03:11:43.468 UTC [endorser] callChaincode -> INFO 05f[0m [ch1][738cb942] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:11:43.486 UTC [endorser] callChaincode -> INFO 060[0m [ch1][738cb942] Exit chaincode: name:"wizcc"  (17ms)
+[34m2019-03-27 03:11:43.486 UTC [comm.grpc.server] 1 -> INFO 061[0m unary call completed {"grpc.start_time": "2019-03-27T03:11:43.468Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40556", "grpc.code": "OK", "grpc.call_duration": "17.992808ms"}
+[34m2019-03-27 03:11:43.956 UTC [comm.grpc.server] 1 -> INFO 062[0m streaming call completed {"grpc.start_time": "2019-03-27T03:11:43.429Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40557", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "527.418583ms"}
+[34m2019-03-27 03:12:51.412 UTC [endorser] callChaincode -> INFO 063[0m [ch1][0be920fd] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:12:51.412 UTC [endorser] callChaincode -> INFO 064[0m [ch1][0be920fd] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:12:51.412 UTC [comm.grpc.server] 1 -> INFO 065[0m unary call completed {"grpc.start_time": "2019-03-27T03:12:51.412Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40561", "grpc.code": "OK", "grpc.call_duration": "756.499µs"}
+[34m2019-03-27 03:12:51.599 UTC [endorser] callChaincode -> INFO 066[0m [ch1][87dc712e] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:12:51.623 UTC [endorser] callChaincode -> INFO 067[0m [ch1][87dc712e] Exit chaincode: name:"wizcc"  (24ms)
+[34m2019-03-27 03:12:51.623 UTC [comm.grpc.server] 1 -> INFO 068[0m unary call completed {"grpc.start_time": "2019-03-27T03:12:51.598Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40561", "grpc.code": "OK", "grpc.call_duration": "24.854186ms"}
+[34m2019-03-27 03:12:53.834 UTC [gossip.privdata] StoreBlock -> INFO 069[0m [ch1] Received block [10] from buffer
+[34m2019-03-27 03:12:53.844 UTC [committer.txvalidator] Validate -> INFO 06a[0m [ch1] Validated block [10] in 9ms
+[34m2019-03-27 03:12:53.870 UTC [kvledger] CommitWithPvtData -> INFO 06b[0m [ch1] Committed block [10] with 1 transaction(s) in 25ms (state_validation=1ms block_commit=18ms state_commit=2ms)
+[34m2019-03-27 03:12:53.882 UTC [endorser] callChaincode -> INFO 06c[0m [ch1][95605ed6] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:12:53.888 UTC [endorser] callChaincode -> INFO 06d[0m [ch1][95605ed6] Exit chaincode: name:"wizcc"  (6ms)
+[34m2019-03-27 03:12:53.889 UTC [comm.grpc.server] 1 -> INFO 06e[0m unary call completed {"grpc.start_time": "2019-03-27T03:12:53.882Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40561", "grpc.code": "OK", "grpc.call_duration": "7.03784ms"}
+[34m2019-03-27 03:12:54.244 UTC [comm.grpc.server] 1 -> INFO 06f[0m streaming call completed {"grpc.start_time": "2019-03-27T03:12:51.555Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40562", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "2.689215027s"}
+[34m2019-03-27 03:16:52.326 UTC [endorser] callChaincode -> INFO 070[0m [ch1][06fbf22c] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:16:52.327 UTC [endorser] callChaincode -> INFO 071[0m [ch1][06fbf22c] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:16:52.327 UTC [comm.grpc.server] 1 -> INFO 072[0m unary call completed {"grpc.start_time": "2019-03-27T03:16:52.326Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40577", "grpc.code": "OK", "grpc.call_duration": "818.595µs"}
+[34m2019-03-27 03:16:52.514 UTC [endorser] callChaincode -> INFO 073[0m [ch1][32909c89] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:16:52.534 UTC [endorser] callChaincode -> INFO 074[0m [ch1][32909c89] Exit chaincode: name:"wizcc"  (20ms)
+[34m2019-03-27 03:16:52.534 UTC [comm.grpc.server] 1 -> INFO 075[0m unary call completed {"grpc.start_time": "2019-03-27T03:16:52.513Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40577", "grpc.code": "OK", "grpc.call_duration": "20.532262ms"}
+[34m2019-03-27 03:16:54.957 UTC [gossip.privdata] StoreBlock -> INFO 076[0m [ch1] Received block [11] from buffer
+[34m2019-03-27 03:16:54.958 UTC [committer.txvalidator] Validate -> INFO 077[0m [ch1] Validated block [11] in 0ms
+[34m2019-03-27 03:16:54.985 UTC [kvledger] CommitWithPvtData -> INFO 078[0m [ch1] Committed block [11] with 1 transaction(s) in 26ms (state_validation=0ms block_commit=22ms state_commit=1ms)
+[34m2019-03-27 03:16:54.997 UTC [endorser] callChaincode -> INFO 079[0m [ch1][745d7ca7] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:16:55.004 UTC [endorser] callChaincode -> INFO 07a[0m [ch1][745d7ca7] Exit chaincode: name:"wizcc"  (7ms)
+[34m2019-03-27 03:16:55.004 UTC [comm.grpc.server] 1 -> INFO 07b[0m unary call completed {"grpc.start_time": "2019-03-27T03:16:54.997Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40577", "grpc.code": "OK", "grpc.call_duration": "7.624832ms"}
+[34m2019-03-27 03:16:55.348 UTC [comm.grpc.server] 1 -> INFO 07c[0m streaming call completed {"grpc.start_time": "2019-03-27T03:16:52.472Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40578", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "2.875081537s"}
+[34m2019-03-27 03:18:24.390 UTC [endorser] callChaincode -> INFO 07d[0m [ch1][ea49f0a8] Entry chaincode: name:"cscc" 
+[34m2019-03-27 03:18:24.391 UTC [endorser] callChaincode -> INFO 07e[0m [ch1][ea49f0a8] Exit chaincode: name:"cscc"  (0ms)
+[34m2019-03-27 03:18:24.391 UTC [comm.grpc.server] 1 -> INFO 07f[0m unary call completed {"grpc.start_time": "2019-03-27T03:18:24.39Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40589", "grpc.code": "OK", "grpc.call_duration": "808.838µs"}
+[34m2019-03-27 03:18:24.579 UTC [endorser] callChaincode -> INFO 080[0m [ch1][4913ae56] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:18:24.594 UTC [endorser] callChaincode -> INFO 081[0m [ch1][4913ae56] Exit chaincode: name:"wizcc"  (14ms)
+[34m2019-03-27 03:18:24.594 UTC [comm.grpc.server] 1 -> INFO 082[0m unary call completed {"grpc.start_time": "2019-03-27T03:18:24.579Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40589", "grpc.code": "OK", "grpc.call_duration": "15.305402ms"}
+[34m2019-03-27 03:18:26.794 UTC [gossip.privdata] StoreBlock -> INFO 083[0m [ch1] Received block [12] from buffer
+[34m2019-03-27 03:18:26.794 UTC [committer.txvalidator] Validate -> INFO 084[0m [ch1] Validated block [12] in 0ms
+[34m2019-03-27 03:18:26.808 UTC [kvledger] CommitWithPvtData -> INFO 085[0m [ch1] Committed block [12] with 1 transaction(s) in 12ms (state_validation=0ms block_commit=8ms state_commit=1ms)
+[34m2019-03-27 03:18:26.823 UTC [endorser] callChaincode -> INFO 086[0m [ch1][08ed37e3] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:18:26.828 UTC [endorser] callChaincode -> INFO 087[0m [ch1][08ed37e3] Exit chaincode: name:"wizcc"  (5ms)
+[34m2019-03-27 03:18:26.828 UTC [comm.grpc.server] 1 -> INFO 088[0m unary call completed {"grpc.start_time": "2019-03-27T03:18:26.822Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40589", "grpc.code": "OK", "grpc.call_duration": "6.132513ms"}
+[34m2019-03-27 03:18:26.850 UTC [endorser] callChaincode -> INFO 089[0m [ch1][c1c6349b] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:18:26.870 UTC [endorser] callChaincode -> INFO 08a[0m [ch1][c1c6349b] Exit chaincode: name:"wizcc"  (20ms)
+[34m2019-03-27 03:18:26.870 UTC [comm.grpc.server] 1 -> INFO 08b[0m unary call completed {"grpc.start_time": "2019-03-27T03:18:26.849Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40589", "grpc.code": "OK", "grpc.call_duration": "21.230228ms"}
+[34m2019-03-27 03:18:28.896 UTC [gossip.privdata] StoreBlock -> INFO 08c[0m [ch1] Received block [13] from buffer
+[34m2019-03-27 03:18:28.897 UTC [committer.txvalidator] Validate -> INFO 08d[0m [ch1] Validated block [13] in 0ms
+[34m2019-03-27 03:18:28.907 UTC [kvledger] CommitWithPvtData -> INFO 08e[0m [ch1] Committed block [13] with 1 transaction(s) in 10ms (state_validation=0ms block_commit=6ms state_commit=1ms)
+[34m2019-03-27 03:18:28.916 UTC [endorser] callChaincode -> INFO 08f[0m [ch1][19c15821] Entry chaincode: name:"wizcc" 
+[34m2019-03-27 03:18:28.944 UTC [endorser] callChaincode -> INFO 090[0m [ch1][19c15821] Exit chaincode: name:"wizcc"  (28ms)
+[34m2019-03-27 03:18:28.944 UTC [comm.grpc.server] 1 -> INFO 091[0m unary call completed {"grpc.start_time": "2019-03-27T03:18:28.915Z", "grpc.service": "protos.Endorser", "grpc.method": "ProcessProposal", "grpc.peer_address": "127.0.0.1:40589", "grpc.code": "OK", "grpc.call_duration": "29.298479ms"}
+[34m2019-03-27 03:18:29.285 UTC [comm.grpc.server] 1 -> INFO 092[0m streaming call completed {"grpc.start_time": "2019-03-27T03:18:24.528Z", "grpc.service": "protos.Deliver", "grpc.method": "Deliver", "grpc.peer_address": "127.0.0.1:40590", "error": "context finished before block retrieved: context canceled", "grpc.code": "Unknown", "grpc.call_duration": "4.757098593s"}
+[34m2019-03-27 03:19:01.936 UTC [nodeCmd] handleSignals -> INFO 093[0m Received signal: 2 (interrupt)
+[34m2019-03-27 03:19:01.936 UTC [gossip.service] Stop -> INFO 094[0m Stopping chain ch1
+[34m2019-03-27 03:19:01.936 UTC [gossip.service] Stop -> INFO 095[0m Stopping leader election for ch1
+[34m2019-03-27 03:19:01.940 UTC [gossip.gossip] Stop -> INFO 096[0m Stopping gossip
+[34m2019-03-27 03:19:01.940 UTC [gossip.discovery] Stop -> INFO 097[0m Stopping
+[34m2019-03-27 03:19:01.940 UTC [gossip.discovery] Stop -> INFO 098[0m Stopped
+[33m2019-03-27 03:19:01.940 UTC [deliveryClient] try -> WARN 099[0m Got error: rpc error: code = Canceled desc = context canceled , at 1 attempt. Retrying in 1s
+[33m2019-03-27 03:19:01.940 UTC [blocksProvider] DeliverBlocks -> WARN 09a[0m [ch1] Receive error: client is closing
+[34m2019-03-27 03:19:01.941 UTC [gossip.comm] Stop -> INFO 09b[0m Stopping
+[34m2019-03-27 03:19:01.942 UTC [gossip.comm] Stop -> INFO 09c[0m Stopped

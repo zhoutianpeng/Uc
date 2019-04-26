@@ -1,0 +1,35 @@
+{
+  "Admins": {
+    "mod_policy": "Admins",
+    "policy": {
+      "type": 3,
+      "value": {
+        "rule": "MAJORITY",
+        "sub_policy": "Admins"
+      }
+    },
+    "version": "0"
+  },
+  "Readers": {
+    "mod_policy": "Admins",
+    "policy": {
+      "type": 3,
+      "value": {
+        "rule": "ANY",
+        "sub_policy": "Readers"
+      }
+    },
+    "version": "0"
+  },
+  "Writers": {
+    "mod_policy": "Admins",
+    "policy": {
+      "type": 3,
+      "value": {
+        "rule": "ANY",
+        "sub_policy": "Writers"
+      }
+    },
+    "version": "0"
+  }
+}

@@ -4,6 +4,14 @@ import java.util.List;
 import org.hyperledger.fabric.shim.ChaincodeBase;
 import org.hyperledger.fabric.shim.ChaincodeStub;
 import com.google.protobuf.ByteString;
+import org.hyperledger.fabric.shim.ledger.QueryResultsIterator;
+import org.hyperledger.fabric.shim.ledger.KeyModification;
+import org.hyperledger.fabric.shim.ledger.CompositeKey;
+import org.hyperledger.fabric.shim.ledger.KeyValue;
+import org.json.JSONObject;
+import org.json.JSONArray;
+import java.util.List;
+
 
 public class TwinChaincode extends ChaincodeBase{
   @Override
@@ -52,37 +60,25 @@ public class TwinChaincode extends ChaincodeBase{
         CompositeKey key = stub.createCompositeKey("userID->twinID",userID);
         
         QueryResultsIterator<KeyValue> iterator = stub.getStateByPartialCompositeKey(key.toString());
+        JSONArray ja = new JSONArray();
         for(KeyValue kv: iterator){
             CompositeKey fkey = stub.splitCompositeKey(kv.getKey());
             String twinID = fkey.getAttributes().get(1);
             String Info = stub.getStringState(twinID);
             System.out.format("car %s: %s\n", twinID,Info);
+            JSONObject jo = new JSONObject(Info);
+            ja.put(jo);
         }
-        return newSuccessResponse();
+        String ret = ja.toString();
+        return newSuccessResponse(ret,toBytes(ret));
     }
     
-  private Response inc(ChaincodeStub stub, List<String> args){
-    int step = 1;
-    if(args.size() > 0 ) step = Integer.parseInt(args.get(0));
-    String valueStr = stub.getStringState("value");
-    int value = Integer.parseInt(valueStr);
-    value += step;
-    stub.putStringState("value",Integer.toString(value));
-    return newSuccessResponse(String.format("updated => %d",value));
+   private byte[] toBytes(String str){
+        return ByteString.copyFromUtf8(str).toByteArray();
   }
-  
-  private Response reset(ChaincodeStub stub, List<String> args){
-    stub.putStringState("value","0");
-    return newSuccessResponse("reset to zero");
-  }
-  
-  private Response value(ChaincodeStub stub, List<String> args){
-    String value = stub.getStringState("value");
-    return newSuccessResponse(value,ByteString.copyFromUtf8(value).toByteArray());
-  }
-  
+    
   public static void main(String[] args){
     System.out.format("hello\n");
-    new CounterChaincode().start(args);
+    new TwinChaincode().start(args);
   }
 }

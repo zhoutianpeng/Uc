@@ -26,10 +26,8 @@ public class TwinChaincode extends ChaincodeBase{
     List<String> args = stub.getParameters();
     System.out.format("fcn => %s",fcn);
     switch(fcn){
-        case "inc": return inc(stub,args);
-        case "reset": return reset(stub,args);
-        case "value": return value(stub,args);
         case "addTwin": return addTwin(stub, args);
+        case "getTwinsByUserID": return getTwinsByUserID(stub, args);
     }
     return newErrorResponse("unimplemented method => " + fcn);
   }

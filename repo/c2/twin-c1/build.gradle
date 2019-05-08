@@ -19,7 +19,6 @@ dependencies {
     compile group: 'org.json', name: 'json', version: '20180813'  
 }
 
-
 sourceSets {
 	main.java.srcDirs += '.'
 }

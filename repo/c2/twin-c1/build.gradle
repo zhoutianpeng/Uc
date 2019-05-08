@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.hyperledger.fabric-chaincode-java', name: 'fabric-chaincode-shim', version: '1.4.0'
+	compile group: 'org.hyperledger.fabric-sdk-java', name: 'fabric-sdk-java', version: '1.4.1'
 }
 
 
@@ -24,14 +24,14 @@ sourceSets {
 }
 
 shadowJar {
-    baseName = 'chaincode'
+    baseName = 'app'
     version = null
     classifier = null
 
     manifest {
-        attributes 'Main-Class': 'com.hubwiz.demo.CounterChaincode'
+        attributes 'Main-Class': 'com.hubwiz.demo.App'
     }
 }
 
 
-mainClassName = "com.hubwiz.demo.CounterChaincode"
+mainClassName = "com.hubwiz.demo.App"

@@ -57,20 +57,11 @@ public class TwinChaincode extends ChaincodeBase{
     //get Twin by TwinID
     private Response getTwinByTwinID(ChaincodeStub stub,List<String> args){
         String twinID = args.get(0);
-        
-        CompositeKey key = stub.createCompositeKey("userID->twinID",twinID);
-        
-        QueryResultsIterator<KeyValue> iterator = stub.getStateByPartialCompositeKey(key.toString());
-        String Info = "";
-        for(KeyValue kv: iterator){
-            CompositeKey fkey = stub.splitCompositeKey(kv.getKey());
-            String tempID = fkey.getAttributes().get(1);
-            Info = stub.getStringState(tempID);
-            System.out.println("--------getTwinByTwinID--------");
-            System.out.format("Twin %s: %s\n", tempID,Info);
-            
+        String info = stub.getStringState(id);
+        if(info == null || info.length() == 0) {
+            return newErrorResponse(String.format("info not found: %s\n",id));
         }
-        return newSuccessResponse(Info,toBytes(Info));
+        return newSuccessResponse(info,toBytes(info));
     }
     
     //get Twins by UserID

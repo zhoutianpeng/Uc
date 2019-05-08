@@ -27,7 +27,7 @@ public class TwinChaincode extends ChaincodeBase{
         System.out.format("fcn => %s",fcn);
         switch(fcn){
             case "addTwin": return addTwin(stub, args);
-            case "getTwinByTwinID": return getTwinsByTwinID(stub, args);
+            case "getTwinByTwinID": return getTwinByTwinID(stub, args);
             case "getTwinsByUserID": return getTwinsByUserID(stub, args);
         }
         return newErrorResponse("unimplemented method => " + fcn);
@@ -61,13 +61,13 @@ public class TwinChaincode extends ChaincodeBase{
         CompositeKey key = stub.createCompositeKey("userID->twinID",twinID);
         
         QueryResultsIterator<KeyValue> iterator = stub.getStateByPartialCompositeKey(key.toString());
+        String Info = "";
         for(KeyValue kv: iterator){
             CompositeKey fkey = stub.splitCompositeKey(kv.getKey());
-            String twinID = fkey.getAttributes().get(1);
-            String Info = stub.getStringState(twinID);
-            
+            String tempID = fkey.getAttributes().get(1);
+            Info = stub.getStringState(tempID);
             System.out.println("--------getTwinByTwinID--------");
-            System.out.format("Twin %s: %s\n", twinID,Info);
+            System.out.format("Twin %s: %s\n", tempID,Info);
             
         }
         return newSuccessResponse(Info,toBytes(Info));
@@ -92,7 +92,8 @@ public class TwinChaincode extends ChaincodeBase{
             JSONObject jo = new JSONObject(Info);
             resultSet.put(jo);
         }
-        return newSuccessResponse(resultSet,toBytes(resultSet));
+         String ret = resultSet.toString();
+        return newSuccessResponse(ret,toBytes(ret));
     }
     
     
